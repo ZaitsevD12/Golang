@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Форма ввода</title>
+    <style>
+        body {
+    background-color: #111;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+  }
+  
+  label {
+    display: block;
+    font-size: 20px;
+    color: #0f0;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #0f0;
+    color: #111;
+    border-radius: 5px;
+    border: none;
+  } 
+    </style>
+
+</head> 
+<body>
+    <form action="/submit" method="POST" enctype="multipart/form-data">
+        <label for="imgtype">Тип изображения:</label>
+        <select name="imgtype" id="imgtype">
+        <option value="player">Player</option>
+        <option value="team">Team</option>
+        <option value="tournament">Tournament</option>
+        <option value="partner">Partner</option>
+        </select>
+        <label for="image">Выберите изображение:</label>
+        <input type="file" id="image" name="image">
+        <br><br>
+        <label for="password">Ok, give me your password:</label>
+        <input type="password" id="password" name="password">
+        <br><br>
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>
